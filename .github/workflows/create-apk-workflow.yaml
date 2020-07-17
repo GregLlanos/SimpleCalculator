@@ -42,7 +42,7 @@ jobs:
           with:
             java-version: 1.8
         - name: Generate apk
-            run: ./gradlew assembleDebug
+          run: ./gradlew assembleDebug
         - name: Upload APK
           uses: actions/upload-artifact@v1
           with:
