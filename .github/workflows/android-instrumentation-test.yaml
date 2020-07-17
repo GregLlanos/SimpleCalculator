@@ -12,9 +12,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Print contents in current directory
-          run: ls -la
+        run: ls -la
       - name: Unit tests
-          run: ./gradlew testDebugUnitTest
+        run: ./gradlew testDebugUnitTest
       - name: Run instrumentation tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
