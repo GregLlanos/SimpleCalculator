@@ -1,14 +1,14 @@
 # 1
 name: Simple Workflow Example
-# 2
+# 2 Events
 on: push
 
-# 3
+# 3 Jobs build and time, corren de forma paralela, en diferentes ambientes
 jobs:
   build:
     # 4
     name: Greet
-    # 5
+    # 5 Ambiente virtualizado
     runs-on: ubuntu-latest
     # 6
     steps:

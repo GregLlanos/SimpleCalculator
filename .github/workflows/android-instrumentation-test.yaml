@@ -15,7 +15,7 @@ jobs:
         run: ls -la
       - name: Unit tests
         run: ./gradlew testDebugUnitTest
-      - name: Run instrumentation tests
+      - name: Run instrumentation tests (important)
         uses: reactivecircus/android-emulator-runner@v2
         with:
             api-level: 29
@@ -25,7 +25,7 @@ jobs:
             emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none
             disable-animations: true
             script: ./gradlew connectedCheck
-      - name: Upload Reports
+      - name: Upload Reports (important)
         uses: actions/upload-artifact@v1
         with:
             name: reports
