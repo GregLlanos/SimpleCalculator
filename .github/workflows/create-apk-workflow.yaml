@@ -1,4 +1,4 @@
-name: CI Intrumentation Test
+name: CI Generate APK Workflow
 on: push
 jobs:
   build-and-test:
