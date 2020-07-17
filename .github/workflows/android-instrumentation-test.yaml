@@ -1,8 +1,9 @@
+name: CI Intrumentation Test
+on: push
 jobs:
   build-and-test:
     name: Build and run tests
-    # runs-on: ubuntu-latest
-    runs-on: macos-latest # Switched to macOS
+    runs-on: macos-latest
     steps:
           - name: Run unit tests
           run: ./gradlew testDebugUnitTest
