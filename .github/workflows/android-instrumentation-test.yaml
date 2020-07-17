@@ -6,8 +6,7 @@ jobs:
     runs-on: macos-latest
     steps:
           - name: Run unit tests
-          run: ./gradlew testDebugUnitTest
-
+            run: ./gradlew testDebugUnitTest
           - name: Run instrumentation tests
             uses: reactivecircus/android-emulator-runner@v2
             with:
