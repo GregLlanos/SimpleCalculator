@@ -5,10 +5,10 @@ jobs:
     name: Build and run tests
     runs-on: macos-latest
     steps:
-          - name: Run unit tests
-            run: ./gradlew testDebugUnitTest
-          - name: Run instrumentation tests
-            uses: reactivecircus/android-emulator-runner@v2
+      - name: Run unit tests
+      run: ./gradlew testDebugUnitTest
+      - name: Run instrumentation tests
+          uses: reactivecircus/android-emulator-runner@v2
             with:
               api-level: 29
               arch: x86
@@ -17,3 +17,9 @@ jobs:
               emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none
               disable-animations: true
               script: ./gradlew connectedCheck
+      - name: Upload Reports
+          uses: actions/upload-artifact@v1
+            with:
+              name: reports
+              path: app/build/reports
+
