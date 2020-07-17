@@ -5,7 +5,7 @@ jobs:
     name: Build and run tests
     runs-on: macos-latest
     steps:
-      - name: Checkout current repository in ubuntu's file system
+      - name: Checkout current repository in macOS file system
         uses: actions/checkout@v1
       - name: Setup JDK 1.8
         uses: actions/setup-java@v1
